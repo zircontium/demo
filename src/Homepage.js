@@ -1,6 +1,6 @@
 import React from "react";
 import { Job } from "./Job.js";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 export default function Homepage(props) {
   return (
     <div>
@@ -26,9 +26,11 @@ export default function Homepage(props) {
         `
       </div>
       <div className="container">
-        <button type="button" class="btn btn-dark">
-          Add Job
-        </button>
+        <Link to="/addForm">
+          <button type="button" class="btn btn-dark">
+            Add Job
+          </button>
+        </Link>
       </div>
     </div>
   );
