@@ -8,7 +8,6 @@ export const Job = ({job, index}) => {
       <td>{job.jobType}</td>
       <td>{job.jobStatus}</td>
       <td>{job.startingDate}</td>
-      <td>{job.endDate}</td>
     </tr>
   )
 }
