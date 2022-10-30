@@ -2,6 +2,9 @@
 import Header from './Header.js';
 import Homepage from './Homepage.js';
 import Footer from './Footer';
+import AddJobForm from './AddJobForm';
+import { BrowserRouter as Router,Routes, Route} from 'react-router-dom'
+
 function App() {
   let jobs = [
     {
@@ -25,9 +28,14 @@ function App() {
   ]
   return (
 <homepage>
-  <Header/>
-  <Homepage jobs ={jobs}/>
-  <Footer/>
+  <Router>
+    <Header/>
+    <Routes>
+    <Route path='/' element={<Homepage jobs ={jobs}/>}/>
+    <Route path='/addJob' element={<AddJobForm/>}/>
+    </Routes>
+    <Footer/>
+  </Router>
 </homepage>
   );
 }
